@@ -1,10 +1,15 @@
-import 'package:flutter/cupertino.dart';
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:stockprices/components/loginpage/login_loginbutton.dart';
 import 'package:stockprices/components/loginpage/login_squaretile.dart';
 import 'package:stockprices/components/loginpage/login_textfield.dart';
+import 'package:stockprices/pages/forgat_password_page.dart';
 import 'package:stockprices/pages/register_page.dart';
+import 'package:http/http.dart' as http;
+import 'package:stockprices/pages/HomePage.dart';
+
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
@@ -12,7 +17,53 @@ class LoginPage extends StatelessWidget {
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
   
-  signInUser(){}
+
+  final String url = 'http://192.168.0.18:3000/login';
+//todo password != second password |password check |usarnamecheck
+  void LoginUser(BuildContext context) async {
+    if (usernameController.text.isNotEmpty &&
+    
+        passwordController.text.isNotEmpty) {
+      var resBody = {
+        "username": usernameController.text,
+        
+        "password": passwordController.text
+      };
+
+      var response = await http.post(
+        Uri.parse(url),
+        headers: {"Content-Type": "application/json"},
+        body: jsonEncode(resBody),
+      );
+
+      print(response.statusCode);
+      print(response.body);
+
+      if (response.statusCode == 200) {
+        // Show dialog if registration is successful
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text('Success'),
+              content: Text('Login successful!'),
+              actions: <Widget>[
+                TextButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => MyApp()),
+                    );
+                  },
+                  child: Text('OK'),
+                ),
+              ],
+            );
+          },
+        );
+      }
+    }
+  }
   
 
   @override
@@ -66,23 +117,32 @@ class LoginPage extends StatelessWidget {
 
                 const SizedBox(height: 5,),
 
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Row(
-                    mainAxisAlignment:MainAxisAlignment.end ,
-                    children: [
-                      Text("Forgat Password?",
-                      style: TextStyle(
-                        color: Colors.grey[600],
-                      
-                      
-                      ),),
-                    ],
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ForgatPasswordPage()));
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    child: Row(
+                      mainAxisAlignment:MainAxisAlignment.end ,
+                      children: [
+                        Text("Forgat Password?",
+                        style: TextStyle(
+                          color: Colors.grey[600],
+                        
+                        
+                        ),),
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(height: 25,),
 
-                LoginButton(onTap: signInUser(),),
+                LoginButton(onTap: () => LoginUser(context),
+                ),
                 
 
                 const SizedBox(height: 50,),

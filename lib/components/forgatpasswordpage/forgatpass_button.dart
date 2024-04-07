@@ -1,10 +1,10 @@
 import "package:flutter/material.dart";
 
-class RegisterButton extends StatelessWidget {
+class ForgatButton extends StatelessWidget {
 
 
   final Function()? onTap;
-  const RegisterButton({super.key,required this.onTap});
+  const ForgatButton({super.key,required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class RegisterButton extends StatelessWidget {
       
         child: const Center(child: Text(
       
-          "Sign Up",
+          "Reset Password",
           style: TextStyle(color: Colors.white),
         ),
          
