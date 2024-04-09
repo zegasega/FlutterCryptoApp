@@ -1,0 +1,12 @@
+com.example.stockprices.app-core-1.6.0-0 C:\Users\PC\.gradle\caches\transforms-3\48012f7b8c4234b33c7558e0f466ee8f\transformed\core-1.6.0\res
+com.example.stockprices.app-jetified-annotation-experimental-1.1.0-1 C:\Users\PC\.gradle\caches\transforms-3\675d4f8b82be03b66a2499ef69f77467\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.stockprices.app-jetified-window-1.0.0-beta04-2 C:\Users\PC\.gradle\caches\transforms-3\b80677c91f94664183fd6ffc76219b18\transformed\jetified-window-1.0.0-beta04\res
+com.example.stockprices.app-jetified-window-java-1.0.0-beta04-3 C:\Users\PC\.gradle\caches\transforms-3\d700e38361e6d99fd41a4e4815c44d9e\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.stockprices.app-debug-4 C:\Users\PC\Desktop\stockprice\stockprices\android\app\src\debug\res
+com.example.stockprices.app-main-5 C:\Users\PC\Desktop\stockprice\stockprices\android\app\src\main\res
+com.example.stockprices.app-pngs-6 C:\Users\PC\Desktop\stockprice\stockprices\build\app\generated\res\pngs\debug
+com.example.stockprices.app-resValues-7 C:\Users\PC\Desktop\stockprice\stockprices\build\app\generated\res\resValues\debug
+com.example.stockprices.app-rs-8 C:\Users\PC\Desktop\stockprice\stockprices\build\app\generated\res\rs\debug
+com.example.stockprices.app-mergeDebugResources-9 C:\Users\PC\Desktop\stockprice\stockprices\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.stockprices.app-mergeDebugResources-10 C:\Users\PC\Desktop\stockprice\stockprices\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.stockprices.app-merged_res-11 C:\Users\PC\Desktop\stockprice\stockprices\build\app\intermediates\merged_res\debug

@@ -1,0 +1,1 @@
+ C:\\Users\\PC\\Desktop\\stockprice\\stockprices\\.dart_tool\\flutter_build\\53893f72d8b6ad471ec3fa013a3ed183\\native_assets.yaml: 

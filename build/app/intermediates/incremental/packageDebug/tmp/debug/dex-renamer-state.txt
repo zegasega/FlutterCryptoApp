@@ -1,0 +1,4 @@
+#Mon Apr 08 01:15:46 TRT 2024
+base.0=C\:\\Users\\PC\\Desktop\\stockprice\\stockprices\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
